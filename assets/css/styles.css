@@ -1,5 +1,5 @@
 /* * {
-    border: 1px solid red; 
+    border: 1px solid red !important;
 } */
 
 
@@ -35,7 +35,7 @@ h3 {
     font-size: 1.5rem;
 }
 
-p { 
+p {
     line-height: 1.3;
     font-size: 1.1rem;
 }
@@ -168,6 +168,22 @@ header li:not(:last-child) {
     margin-right: 1.5rem;
 }
 
+nav button {
+    display: none;
+}
+
+@media only screen and (max-width: 576px) {
+    nav ul {
+        display: none;
+    }
+
+    nav button {
+        display: block;
+    }
+}
+
+
+
 /* HERO */
 
 #hero {
@@ -192,9 +208,26 @@ header li:not(:last-child) {
     margin-right: 2rem;
 }
 
+
+
 @media only screen and (max-width: 1024px) {
     #hero {
-        height: 50%;
+        height: 60%;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    #hero .button:first-child {
+        margin-right: .5rem;
+    }
+
+    #hero .button {
+        margin: .5rem;
     }
 }
 
@@ -203,9 +236,9 @@ header li:not(:last-child) {
 .about__card {
     max-width: 300px;
     text-align: center;
-    padding: 2rem;
     transition: background-color;
     transition-duration: 300ms;
+    padding: 2rem;
 }
 
 .about__card .img-container {
@@ -218,7 +251,28 @@ header li:not(:last-child) {
 }
 
 .about__card:hover {
-    background-color: rgba(17, 109, 166, 0.05);
+    background-color: rgba(17, 109, 166, 0.1);
+}
+
+@media only screen and (max-width: 1024px) {
+    .about__card p {
+        font-size: 1rem;
+    }
+
+    .about__card .img-container {
+        width: 200px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .about__cards {
+        flex-direction: column;
+    }
+
+    .about__card {
+        margin: auto;
+        margin-bottom: 2rem;
+    }
 }
 
 
@@ -231,12 +285,12 @@ header li:not(:last-child) {
 }
 
 .services__card {
-    width: 250px;
-    height: 250px;
     position: relative;
     transition: background-color 300ms;
     cursor: pointer;
-    padding: 0.5rem;
+    flex-basis: 25%;
+    aspect-ratio: 1/1;
+    margin: 2px;
 }
 
 .services__card--content {
@@ -259,9 +313,139 @@ header li:not(:last-child) {
     width: 100%;
     height: 100%;
     background-color: rgba(89, 13, 13, 0.5);
+    transition: opacity 500ms;
 }
 
 .services__card--content h3 {
     position: relative;
     color: white;
+    transition: opacity 500ms;
 }
+
+.services__card--content:hover .dim,
+.services__card--content:hover h3 {
+    opacity: 0;
+}
+
+@media only screen and (max-width: 1024px) {
+    .services__cards {
+        flex-wrap: wrap;
+    }
+
+    .services__card {
+        flex-basis: 40%;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+
+    .services__card {
+        flex-basis: 90%;
+        margin-bottom: 2rem;
+    }
+}
+
+/* TEAM */
+#team {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.team__card {
+    margin-bottom: 5%;
+    width: 400px;
+    background-color: rgba(17, 109, 166, 0.05);
+    margin: 10px;
+    padding: 1rem;
+}
+
+.team__card>div {
+    flex: 1;
+}
+
+
+
+.team__card img {
+    max-width: 150px;
+    border-radius: 50%;
+    margin-right: 2rem;
+}
+
+.team__card .team__description {
+    padding-left: 2rem;
+    border-left: 1px solid rgba(89, 13, 13, 0.31);
+}
+
+.team__card .team__name {
+    font-weight: 700;
+}
+
+@media only screen and (max-width: 1024px) {
+
+    .team__cards {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .team__card {
+        flex-basis: auto;
+        padding: 0 20%;
+        width: auto;
+        background: none;
+    }
+
+    .team__card>div {
+        flex: 1;
+    }
+
+    .team__card img {
+        max-height: 150px;
+        width: auto;
+        margin: 0;
+    }
+
+    .team__card .team__description {
+        border: 0;
+        padding-left: 0;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+
+    .team__card {
+        padding: 0 5%;
+    }
+
+}
+
+@media only screen and (max-width: 576px) {
+
+    .team__card {
+        padding: 0%;
+    }
+
+    .team__card img {
+        max-height: 75px;
+        width: auto;
+        margin: 0;
+    }
+}
+
+/* FOOTER */
+
+footer {
+    /* border-top: 1px solid #590D0D; */
+    margin-top: 200px;
+    padding: 2rem;
+    color: white;
+    background-color: rgba(89, 13, 13, 1);
+}
+
+footer span {
+    padding: .3rem;
+    cursor: pointer;
+}
+
+footer span:hover {}

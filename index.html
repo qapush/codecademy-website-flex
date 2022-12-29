@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@500&family=IBM+Plex+Sans:wght@300&display=swap"
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@500&family=IBM+Plex+Sans:wght@300;700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/reset.css">
   <link rel="stylesheet" href="./assets/css/styles.css">
@@ -25,6 +25,9 @@
         <li><a href="#">Team</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
+      <button class="button button-red">
+        Contact us
+      </button>
     </nav>
   </header>
   <main>
@@ -54,8 +57,7 @@
             <img src="./assets/images/cameras.png" alt="Cameras">
           </div>
           <p>
-            Our team provides a&nbsp;wide range of photoservices and we would be happy to discuss new ideas with you. 
-
+            Our team provides a&nbsp;wide range of photoservices and we would be happy to discuss new ideas with you.
           </p>
           <button class="button button-red">
             Check our services
@@ -78,17 +80,17 @@
       <h2 class="section__title">
         Services
       </h2>
-      <div class="services__cards flex flex-wrap flex-justify-center">
-        
+      <div class="services__cards flex flex-justify-center flex-align-center">
+
         <div class="services__card ">
-            <div class="services__card--content flex flex-justify-center flex-align-center">
-              <div class="img-container">
-                <img src="./assets/images/tours.jpg" alt="Cameras">
-              </div>
-              <div class="dim"></div>
-              <h3>Virtual tours</h3>
+          <div class="services__card--content flex flex-justify-center flex-align-center">
+            <div class="img-container">
+              <img src="./assets/images/tours.jpg" alt="Cameras">
             </div>
-        </div>  
+            <div class="dim"></div>
+            <h3>Virtual tours</h3>
+          </div>
+        </div>
 
         <div class="services__card">
           <div class="services__card--content flex flex-justify-center flex-align-center">
@@ -103,7 +105,7 @@
         <div class="services__card">
           <div class="services__card--content  flex flex-justify-center flex-align-center">
             <div class="img-container">
-                <img src="./assets/images/interior.jpg" alt="Cameras">
+              <img src="./assets/images/interior.jpg" alt="Cameras">
             </div>
             <div class="dim"></div>
             <h3>Interion</h3>
@@ -113,7 +115,7 @@
         <div class="services__card">
           <div class="services__card--content  flex flex-justify-center flex-align-center">
             <div class="img-container">
-                <img src="./assets/images/portrait.jpg" alt="Cameras">
+              <img src="./assets/images/portrait.jpg" alt="Cameras">
             </div>
             <div class="dim"></div>
             <h3>Portrait</h3>
@@ -122,6 +124,80 @@
 
       </div>
     </section>
+    <section id="team">
+      <h2 class="section__title">
+        Team
+      </h2>
+      <div class="team__cards flex flex-wrap flex-justify-center">
+
+        <div class="team__card flex">
+          <div class="img-container">
+            <img src="./assets/images/team-2.jpg" alt="Team Member" class="team__image">
+          </div>
+          <div class="team__description flex flex-column flex-justify-center">
+            <p class="team__name">Neo Browning</p>
+            <p class="team__position">
+              Photographer
+            </p>
+          </div>
+        </div>
+
+        <div class="team__card flex">
+          <div class="img-container">
+            <img src="./assets/images/team-4.jpg" alt="Team Member" class="team__image">
+          </div>
+          <div class="team__description flex flex-column flex-justify-center">
+            <p class="team__name">Samantha Donovan</p>
+            <p class="team__position">
+              Photographer
+            </p>
+          </div>
+        </div>
+
+        <div class="team__card flex">
+          <div class="img-container">
+            <img src="./assets/images/team-3.jpg" alt="Team Member" class="team__image">
+          </div>
+          <div class="team__description flex flex-column flex-justify-center">
+            <p class="team__name">Elijah Olsen</p>
+            <p class="team__position">
+              Technician
+            </p>
+          </div>
+        </div>
+
+        <div class="team__card flex">
+          <div class="img-container">
+            <img src="./assets/images/team-1.jpg" alt="Team Member" class="team__image">
+          </div>
+          <div class="team__description flex flex-column flex-justify-center">
+            <p class="team__name">Harley Stark</p>
+            <p class="team__position">
+              Manager
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <footer class="flex flex-justify-space-between">
+      <div class="flex flex-column">
+        <span>
+          hello@domain.com
+        </span>
+        <span>
+          +48 123-456-789
+        </span>
+      </div>
+      <div class="flex flex-column">
+        <span>
+          Instagram
+        </span>
+        <span>
+          Facebook
+        </span>
+      </div>
+    </footer>
   </main>
 </body>
 
